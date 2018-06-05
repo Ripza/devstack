@@ -18,6 +18,9 @@ services:
       - ${DEVSTACK_WORKSPACE}/edx-platform:/edx/app/edxapp/edx-platform:cached
       - edxapp_node_modules:/edx/app/edxapp/edx-platform/node_modules
       - ${DEVSTACK_WORKSPACE}/src:/edx/src:cached
+  notes:
+    volumes:
+      - ${DEVSTACK_WORKSPACE}/edx-notes-api:/edx/app/notes/edx-notes-api:cached
   studio:
     volumes:
       - ${DEVSTACK_WORKSPACE}/edx-platform:/edx/app/edxapp/edx-platform:cached
